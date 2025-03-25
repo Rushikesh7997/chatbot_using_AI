@@ -1,0 +1,28 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font: Inter, sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#FAF0FF, #DACAFF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbot-popup{
+    background: #fff;
+    width: 420px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5)
+}
+
+/* 8.49 */
