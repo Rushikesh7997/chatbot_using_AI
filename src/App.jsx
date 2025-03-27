@@ -3,12 +3,10 @@ import './App.css'
 import { ChatbotIcon } from './components/ChatbotIcon'
 import ChatForm from './components/ChatForm'
 import { ChatMessage } from './components/ChatMessage';
-import { ChatMessageNew } from './components/ChatMessageNew';
 
 function App() {
   const [chatHistory, setChatHistory] = useState([]);
-
-
+  
   return (
     <>
       <div className="container">
@@ -32,15 +30,9 @@ function App() {
             </div>
 
             {/* render the chat history dynamically  */}
-            {chatHistory.map((chat, index)=>{
-                // <ChatMessage key={index} chat={chat}/>
-                // <ChatMessageNew key={index} chat={chat}/>
-
-             <div key={index} className={`message user-message`}>
-                    {chat.role === "model" && <ChatbotIcon/>}
-                    <p className="message-text">{chat[0]?.text}</p>
-                </div>
-            })}
+            {chatHistory.map((chat, index)=>(
+                <ChatMessage key={index} chat={chat}/>
+            ))}
           </div>
 
             {/* Footer  */}
